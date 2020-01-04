@@ -155,7 +155,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}> If you could see this text, then Code Push Works for you!!! Enjoy!!!</Text>
+        <Text style={styles.welcome}> UHUUUUHUHUHUHUHUHHUUUUU!!! Enjoy!!!</Text>
         <TouchableOpacity onPress={this.onButtonPress}>
           <Text>Check for updates</Text>
         </TouchableOpacity>
