@@ -149,6 +149,14 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            if (project.hasProperty('my-upload-key.keystore')) {
+                storeFile file('my-upload-key.keystore')
+                storePassword 'changeit'
+                keyAlias 'my-key-alias'
+                keyPassword 'changeit'
+            }
+        }
     }
     buildTypes {
         debug {
