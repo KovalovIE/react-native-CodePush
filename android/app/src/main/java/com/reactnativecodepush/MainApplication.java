@@ -24,7 +24,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
           @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
-          packages.add(new CodePush('H7OS5jj_7y6WtZPvY0z_lH_QM0jSZ12vCftut', MainApplication.this, BuildConfig.DEBUG));
+          // packages.add(new CodePush('H7OS5jj_7y6WtZPvY0z_lH_QM0jSZ12vCftut', MainApplication.this, BuildConfig.DEBUG));
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
           return packages;
