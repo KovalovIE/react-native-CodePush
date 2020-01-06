@@ -75,6 +75,7 @@ class App extends Component<Props> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Enjoy!!!</Text>
+        <Text style={styles.welcome}>UPDATE ALMOST</Text>
         {/* <TouchableOpacity onPress={this.onButtonPress}>
           <Text>Hello</Text>
         </TouchableOpacity> */}
@@ -83,7 +84,12 @@ class App extends Component<Props> {
   }
 }
 
-App = codePush(App);
+const codePushOptions = { 
+  installMode: codePush.InstallMode.IMMEDIATE, 
+  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME 
+};
+
+App = codePush(codePushOptions)(App);
 
 export default App;
 
