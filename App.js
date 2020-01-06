@@ -144,7 +144,7 @@ const instructions = Platform.select({
 
 type Props = {};
 
-export class App extends Component<Props> {
+class App extends Component<Props> {
   
   onButtonPress() {
     // codePush.sync({
@@ -157,18 +157,16 @@ export class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}> UHUUUUHUUUUU!!! Enjoy!!!</Text>
-        <TouchableOpacity onPress={this.onButtonPress}>
+        <Text style={styles.welcome}>Enjoy!!!</Text>
+        {/* <TouchableOpacity onPress={this.onButtonPress}>
           <Text>Hello</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     );
   }
 }
 
-App = codePush(App);
-
-export default App;
+export default codePush({ checkFrequency: codePush.CheckFrequency.ON_APP_START })(App);
 
 const styles = StyleSheet.create({
   container: {
