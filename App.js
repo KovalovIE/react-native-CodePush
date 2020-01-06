@@ -143,26 +143,32 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-export default class App extends Component<Props> {
+
+export class App extends Component<Props> {
   
   onButtonPress() {
-    codePush.sync({
-      updateDialog: true,
-      installMode: codePush.InstallMode.IMMEDIATE
-    });
+    // codePush.sync({
+    //   updateDialog: true,
+    //   installMode: codePush.InstallMode.IMMEDIATE
+    // });
+    alert('Hello')
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}> UHUUUUHUHUHUHUHUHHUUUUU!!! Enjoy!!!</Text>
+        <Text style={styles.welcome}> UHUUUUHUUUUU!!! Enjoy!!!</Text>
         <TouchableOpacity onPress={this.onButtonPress}>
-          <Text>Check for updates</Text>
+          <Text>Hello</Text>
         </TouchableOpacity>
       </View>
     );
   }
 }
+
+App = codePush(App);
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
