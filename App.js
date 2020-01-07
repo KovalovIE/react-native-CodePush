@@ -47,6 +47,7 @@ import {
   StyleSheet,
   Text,
   View,
+  TouchableOpacity,
 } from "react-native";
 import codePush from "react-native-code-push";
 
@@ -66,13 +67,20 @@ class App extends Component<Props> {
     }, 3000)
   }
 
+  onButtonPress = () => {
+    this.setState({isShow: false})
+  }
+
   render() {
     const {isShow} = this.state;
     return (
       isShow
       ? <View style={styles.container}>
           <Text style={styles.welcome}>Enjoy!!!</Text>
-          <Text style={styles.welcome}>UPDATE DONE</Text>
+          <Text style={styles.welcome}>UPDATE DONE!!!</Text>
+          <TouchableOpacity onPress={this.onButtonPress}>
+            <Text>Click</Text>
+          </TouchableOpacity>
         </View>
       : <Text style={styles.welcome}>SplashScreen</Text>
     );
@@ -80,8 +88,8 @@ class App extends Component<Props> {
 }
 
 const codePushOptions = { 
-  installMode: codePush.InstallMode.IMMEDIATE, 
-  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME 
+  installMode: codePush.InstallMode.ON_NEXT_RESTART, 
+  checkFrequency: codePush.CheckFrequency.ON_APP_START 
 };
 
 export default codePush(codePushOptions)(App);
@@ -97,10 +105,5 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: "center",
     margin: 10
-  },
-  instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5
   }
 });
