@@ -23,8 +23,8 @@ class App extends Component {
     return (
       isShow
       ? <View style={styles.container}>
-          <Text style={styles.welcome}>WORK Project</Text>
-          <Text style={styles.welcome}>UPDATE DONE!!!</Text>
+          {/* <Text style={styles.welcome}>WORK Project</Text> */}
+          <Text style={styles.welcome}>UPDATE</Text>
           {/* <TouchableOpacity onPress={this.onButtonPress}>
             <Text style={styles.welcome}>Click</Text>
           </TouchableOpacity> */}
