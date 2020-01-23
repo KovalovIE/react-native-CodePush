@@ -1,11 +1,10 @@
+/* eslint-disable */
 import React, { Component } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import codePush from "react-native-code-push";
 import Buttons from "./app/components/Buttons/button";
 
-type Props = {};
-
-class App extends Component<Props> {
+class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -19,16 +18,16 @@ class App extends Component<Props> {
     }, 3000)
   }
 
-  onButtonPress = () => {
-    this.setState({isShow: false})
-  }
-
   render() {
-    const {isShow} = this.state;
+    const { isShow } = this.state;
     return (
       isShow
       ? <View style={styles.container}>
+          <Text style={styles.welcome}>WORK Project</Text>
           <Text style={styles.welcome}>UPDATE DONE!!!</Text>
+          {/* <TouchableOpacity onPress={this.onButtonPress}>
+            <Text style={styles.welcome}>Click</Text>
+          </TouchableOpacity> */}
           <Buttons btnRight='btnRight' btnLeft='btnLeft' />
         </View>
       : <Text style={styles.welcome}>SplashScreen</Text>
